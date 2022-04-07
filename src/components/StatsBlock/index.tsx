@@ -7,16 +7,18 @@ import Oval from '../../assets/Oval.svg';
 
 import StatsCard from './StatsCard';
 
-const StatsBlock = () => {
+const StatsBlock = (props:any) => {
+  const {errors, average, zeros } = props;
+
   return (
     <CardCon container flexDirection="row">
         <StatsCard
-          textOne="Errors: 0.12%"
-          textTwo="Average: 0.15%"
+          textOne= {`Errors: ${errors.code}%`}
+          textTwo= {`Average: ${errors.count}%`}
         />
         <StatsCard
-          textOne="Zeroes: 0.12%"
-          textTwo="Average: 0.15%"
+          textOne= { `Zeroes: ${ zeros ? zeros.toFixed(2) : 0}%`}
+          textTwo= {`Average: ${errors.count}%`}
         />
         <StatsCard
           textOne="Timeouts: 0.12%"

@@ -1,9 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
  import { Progress, ProgressBar, ProgressDetails, ProgressDetailsCon, ProgressBox } from './style';
 
 
 const StackedBars = (props: any) => {
-    const { composition } = props;
+    const { data } = useSelector((state: any) => state.data);
+    console.log(data)
+
     const bars = [
       {color: '#FFCC00', width: 236, error: 'Error 500: 1 256'},
       {color: '#5856D5', width: 157, error: 'Error 501: 800'},

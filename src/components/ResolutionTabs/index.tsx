@@ -3,17 +3,13 @@ import Box from '@mui/material/Box';
 
 import {AntTabs, AntTab } from './style';
 
-export default function ResolutionTabs() {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
+export default function ResolutionTabs(props:any) {
+  const {value, onChange } = props;
 
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ bgcolor: '#fff' }}>
-        <AntTabs value={value} onChange={handleChange} aria-label="resolution tabs">
+        <AntTabs value={value} onChange={onChange} aria-label="resolution tabs">
           <AntTab label="Last Hour" />
           <AntTab label="Today" />
           <AntTab label="Yesterday" />

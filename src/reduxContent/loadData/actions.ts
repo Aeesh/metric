@@ -1,3 +1,5 @@
+import { GET_DATA } from './types';
+
 
 export const data = {
   "errors_last_3days": [
@@ -70,3 +72,6 @@ export const data = {
   ]
 }
 
+export const loadData = () => async (dispatch:any) => {
+  dispatch({ type: GET_DATA, payload: data });
+};

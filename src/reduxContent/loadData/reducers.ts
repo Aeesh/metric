@@ -9,7 +9,6 @@ const getDataReducer = (state = initState, action:any) => {
     case GET_DATA:
         return {
             ...state,
-            isFetching: false,
             data: action.payload
         };
     default:
