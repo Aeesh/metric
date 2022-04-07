@@ -6,6 +6,7 @@ import { StyledMainMetrics, Header } from './style'
 
 import ResolutionTabs from '../ResolutionTabs';
 import StatsBlock from '../StatsBlock';
+import StackedBars from '../StackedBars';
 
 const Tabs = () => {
   return (
@@ -13,6 +14,7 @@ const Tabs = () => {
       <Header> Main metrics </Header>
       <ResolutionTabs />
       <StatsBlock />
+      <StackedBars />
     </StyledMainMetrics>
   )
 }
